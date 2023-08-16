@@ -1,0 +1,20 @@
+function onCharacterUpload(characterName) {
+    // Call the Azure Functions endpoint
+    fetch(AZURE_FUNCTION_ENDPOINT, {
+        method: 'POST',
+        body: JSON.stringify({
+            action: 'character_search',
+            character_name: characterName
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.result === 'Character found') {
+            // Logic to move to the next step
+        } else {
+            // Logic to display an error message
+        }
+    });
+}
+
+// ... Other frontend processes ...
