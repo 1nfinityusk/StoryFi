@@ -1,6 +1,6 @@
 # StoryFi
 Prototype_code
-Certainly! Here's the English translation of the provided text:
+
 
 Objective
 To create a prototype of a browser application called "StoryFi". As the frontend design has been developed in WIX, we aim to integrate it with Azure Open AI and other tools to ensure the application is fully functional.
