@@ -1,0 +1,25 @@
+import json
+import requests
+
+def process_request(req):
+    # Process the request based on its content
+    action = req.get('action')
+    
+    if action == 'character_search':
+        return character_search(req.get('character_name'))
+    elif action == 'get_values':
+        return get_values(req.get('character_name'))
+    # ... Add other actions as needed ...
+    else:
+        return json.dumps({'error': 'Invalid action'})
+
+def character_search(character_name):
+    # Logic to verify the character using Azure Open AI
+    # This is just a sample, so the actual API call is omitted
+    return json.dumps({'result': 'Character found'})
+
+def get_values(character_name):
+    # Logic to fetch values using Azure Open AI
+    prompt = f"I admire a way of life like {character_name}. Based on this, please list 50 values that might be inherently present within me."
+    # Again, this is just a sample, so the actual API call is omitted
+    return json.dumps({'values': ['value1', 'value2', 'value3', ...]})
